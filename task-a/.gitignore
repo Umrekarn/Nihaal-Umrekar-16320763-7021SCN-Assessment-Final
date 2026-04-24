@@ -1,0 +1,4 @@
+# Build outputs (regenerate with: make vulnerable && make secure)
+vulnerable
+secure
+*.o

@@ -1,0 +1,30 @@
+# 7021SCN Task C — Semgrep SAST
+name: Semgrep SAST (OWASP)
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Semgrep via pip
+        run: python3 -m pip install --upgrade pip && python3 -m pip install semgrep
+
+      - name: Run Semgrep (OWASP Top 10 ruleset, JSON output)
+        run: semgrep scan --config="p/owasp-top-ten" --json -o semgrep-report.json
+
+      - name: Upload Semgrep JSON report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semgrep-audit-report
+          path: semgrep-report.json
