@@ -10,4 +10,4 @@ This repository is my Software Security portfolio for 7021SCN.
 - `task-d/` - Dynamic testing (ZAP/Burp) notes and evidence
 - `task-e/` - SBOM and compliance notes
 - `webapplication/` - Local Flask app used as the target system for Tasks B/D/C analysis
-- `report/` - Place the final 500-word Turnitin Word document here
+- `report/` - Submission report
