@@ -22,6 +22,19 @@ What it does:
 
 Important detail: upload uses `if: always()` so the report is still saved even if scan step fails.
 
+## Local validation completed
+
+To avoid waiting only on CI, I also ran a local Semgrep scan against `webapplication/app.py` and exported JSON:
+
+- output file: `task-c/semgrep-report-local.json`
+- short triage summary: `task-c/triage-note.md`
+
+Local scan summary from this run:
+
+- total findings: 46
+- strongest theme: SQL injection style findings on dynamic SQL usage
+- also flagged: raw HTML output risk patterns and debug-mode warning
+
 ## Why this setup matters
 
 Running SAST on every push helps avoid the common issue of forgetting to run checks.
@@ -59,8 +72,6 @@ Without this step, teams either ignore important issues or lose time on low-prio
 
 ## Evidence to include for marking
 
-After pushing Task C and triggering the workflow, capture and keep:
-
 - screenshot of `.github/workflows/semgrep-sast.yml`
 - screenshot of Actions run summary
 - screenshot of Semgrep step log
@@ -76,5 +87,3 @@ Suggested location:
 
 - Semgrep docs: https://semgrep.dev/docs/
 - OWASP Top 10: https://owasp.org/www-project-top-ten/
-
-(References will be formatted to final module style before submission.)

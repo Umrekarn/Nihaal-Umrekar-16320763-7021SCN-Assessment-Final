@@ -9,6 +9,15 @@ The final files in this task are:
 - `Makefile` - build targets for both versions
 - `evidence/` - screenshots from build, runtime behaviour, and debugging
 
+Evidence files used:
+
+- `evidence/01-environment.png`
+- `evidence/02-build-success.png`
+- `evidence/03-short-input-both-ok.png`
+- `evidence/04-vulnerable-segfault.png`
+- `evidence/05-secure-rejected.png`
+- `evidence/06-gdb-sigsegv-bt.png`
+
 ## What the brief asked for
 
 Task A required three things:

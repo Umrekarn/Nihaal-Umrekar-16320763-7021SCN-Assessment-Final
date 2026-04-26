@@ -33,11 +33,25 @@ Trust boundaries to highlight:
 
 The `users` table stores password data as plain text in this lab setup, and the seed script adds `admin/password`, so this is intentionally a weak training target.
 
-### Diagram file
+### Diagram set used in this task
 
-The Level 1 DFD for this task is stored at:
+Level 1 (context and trust boundaries):
 
 `task-b/diagrams/level-1-dfd-my-shop-trust-boundaries.png`
+
+Level 2 (auth + product flow decomposition):
+
+`task-b/diagrams/level-2-dfd-auth-and-product-flow.png`
+
+Level 3 (admin/review control decomposition):
+
+`task-b/diagrams/level-3-dfd-admin-and-review-control-flow.png`
+
+What changed between levels:
+
+- Level 1 keeps the broad architecture and boundary view.
+- Level 2 breaks normal user and product paths into internal process groups.
+- Level 3 zooms into high-risk control points (admin role checks, review handling, edit/delete controls).
 
 ---
 
