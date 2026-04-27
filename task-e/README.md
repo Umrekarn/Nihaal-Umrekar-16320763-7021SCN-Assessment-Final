@@ -44,7 +44,3 @@ So even for a small coursework app, SBOM gives a repeatable supply-chain control
 ## Short reflection
 
 The dependency-only SBOM was quick to produce, but the image-level SBOM was more useful because it reflects what is actually packaged for runtime. Doing both gave better confidence and better evidence quality.
-
-## Final status
-
-Task E deliverables are in place and ready for submission polish.
