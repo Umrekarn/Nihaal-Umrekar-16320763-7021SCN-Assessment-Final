@@ -5,6 +5,7 @@
 This repository contains my full practical portfolio for 7021SCN Software Security.  
 The work is organised into five assessed tasks (A-E), with one shared target Flask application used for modelling and testing tasks.
 
+Detailed description of each task is done in the individual readme files with evidence.
 ---
 
 ## Repository Structure
